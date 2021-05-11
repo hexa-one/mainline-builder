@@ -4,7 +4,7 @@ from os.path import expanduser
 from line_con import *
 from check_type import KERNEL_TYPE
 
-os.chdir('../')
+os.chdir('../catalog')
 
 if os.path.exists(KERNEL_VER_INPUT):
     os.remove((KERNEL_VER_INPUT) + '/install.sh')
