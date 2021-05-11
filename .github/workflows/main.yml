@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      - name: bump changes 
+      - name: update submodule
         run: |
           python tools/submodule/main.py
         env:
