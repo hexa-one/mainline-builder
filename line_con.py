@@ -4,7 +4,48 @@ wget = '      wget'
 cd = '      cd'
 
 KERNEL_VER_INPUT = input('Kernel version: ')
-VER_STR = (KERNEL_VER_INPUT).replace(".", "")
+
+def insert (source_str, insert_str, pos):
+    return source_str[:pos]+insert_str+source_str[pos:]
+
+if  (KERNEL_VER_INPUT).endswith('.1'): 
+    VER_STR = (KERNEL_VER_INPUT).replace(".", "")  
+    index = VER_STR.find('Panda')
+    VER_STR = VER_STR[:index] + '0' + VER_STR[index:]
+elif (KERNEL_VER_INPUT).endswith('.2'): 
+        VER_STR = (KERNEL_VER_INPUT).replace(".", "")
+        index = VER_STR.find('Panda')
+        VER_STR = VER_STR[:index] + '0' + VER_STR[index:]
+elif (KERNEL_VER_INPUT).endswith('.3'): 
+        VER_STR = (KERNEL_VER_INPUT).replace(".", "")
+        index = VER_STR.find('Panda')
+        VER_STR = VER_STR[:index] + '0' + VER_STR[index:]
+elif (KERNEL_VER_INPUT).endswith('.4'): 
+        VER_STR = (KERNEL_VER_INPUT).replace(".", "")
+        index = VER_STR.find('Panda')
+        VER_STR = VER_STR[:index] + '0' + VER_STR[index:]
+elif (KERNEL_VER_INPUT).endswith('.5'): 
+        VER_STR = (KERNEL_VER_INPUT).replace(".", "")
+        index = VER_STR.find('Panda')
+        VER_STR = VER_STR[:index] + '0' + VER_STR[index:]
+elif (KERNEL_VER_INPUT).endswith('.6'): 
+        VER_STR = (KERNEL_VER_INPUT).replace(".", "")
+        index = VER_STR.find('Panda')
+        VER_STR = VER_STR[:index] + '0' + VER_STR[index:]
+elif (KERNEL_VER_INPUT).endswith('.7'): 
+        VER_STR = (KERNEL_VER_INPUT).replace(".", "")
+        index = VER_STR.find('Panda')
+        VER_STR = VER_STR[:index] + '0' + VER_STR[index:]
+elif (KERNEL_VER_INPUT).endswith('.8'): 
+        VER_STR = (KERNEL_VER_INPUT).replace(".", "")
+        index = VER_STR.find('Panda')
+        VER_STR = VER_STR[:index] + '0' + VER_STR[index:]
+elif (KERNEL_VER_INPUT).endswith('.9'): 
+        VER_STR = (KERNEL_VER_INPUT).replace(".", "")
+        index = VER_STR.find('Panda')
+        VER_STR = VER_STR[:index] + '0' + VER_STR[index:]
+else: VER_STR = (KERNEL_VER_INPUT).replace(".", "")
+
 COMMIT_MSG=('git commit -m "' + (KERNEL_VER_INPUT) + '"')
 CONFIG_DIR = ('/.config/mainline/')
 CONFIG_FILE = ('mainline.conf')
