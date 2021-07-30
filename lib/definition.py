@@ -3,6 +3,8 @@ from .check_type import KERNEL_VER_INPUT
 def insert (source_str, insert_str, pos):
     return source_str[:pos]+insert_str+source_str[pos:]
 
+VER_STAND = ('0')
+
 if  (KERNEL_VER_INPUT).endswith('.0'): 
     VER_STR = (KERNEL_VER_INPUT).replace(".", "")  
     index = VER_STR.find('Cat')

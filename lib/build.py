@@ -1,6 +1,7 @@
 import os
 from .check_type import KERNEL_VER_INPUT
 from .definition_script import *
+from .get_url import *
 
 def buildmain():
     os.chdir('../../catalog')

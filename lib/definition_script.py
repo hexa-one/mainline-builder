@@ -1,4 +1,6 @@
 from .definition import *
+from .get_url import *
+
 empty = ''
 empty1 = ' '
 wget = '      wget'
@@ -7,7 +9,7 @@ cd = '      cd'
 line1=('#! /usr/bin/env bash')
 line3=('KERNEL_VER="' + (KERNEL_VER_INPUT) + '"')
 line3_1=('VER_STAND="' + (VER_STAND) + '"')
-line4=('VER_STR="' + '0' + (VER_STR) + '"')
+line4=('VER_STR="' + (VER_STR) + '"')
 line6=('while [[ $# -gt 0 ]]; do')
 line7=('  PROG_ARGS+=("${1}")')
 line8=('  case "${1}" in')
@@ -52,12 +54,13 @@ text13=('## arm64')
 text17=(text7).replace("-amd", "-arm")
 text25=('kernel by [`https://kernel.ubuntu.com`](https://kernel.ubuntu.com/)')
 
-print("Type the amd64 kernel URL's.")
-wget1 = input()
-wget2 = input()
-wget3 = input()
-wget4 = input()
-print("Type the arm64 kernel URL's.")
-wget5 = input()
-wget6 = input()
-wget7 = input()
+from .get_url import main
+main()
+
+from .check_type import main as maintype
+KERNEL_TYPE = maintype()
+RC=("rc")
+if KERNEL_TYPE == RC:
+    wget1, wget2, wget3, wget4, wget5, wget6, wget7 = rc()
+else: 
+    wget1, wget2, wget3, wget4, wget5, wget6, wget7 = mainline()
