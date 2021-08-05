@@ -21,7 +21,11 @@ def build():
     RC=("rc")
     if KERNEL_TYPE == RC:
         from .build import buildrc
+        from .build import buildreadme
         buildrc()
+        buildreadme()
     else: 
         from .build import buildmain
+        from .build import buildreadme
         buildmain()
+        buildreadme()
