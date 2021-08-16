@@ -1,18 +1,18 @@
 from .get_latest_release import get_latest
 
-mainl, lts, rc = get_latest()
+mainline, lts, rc = get_latest()
 
 empty=('')
 
 l1=('<div align="center">')
 l2=('  <a align="center">')
 l3=('    <center align="center">')
-l4=('      <img src="assets/Mainl-pink.svg" alt="ubuntumainline" align="center">')
+l4=('      <img src="assets/Mainline-pink.svg" alt="ubuntumainline" align="center">')
 l5=('    </center>')
 l6=('  </a>')
 l7=('  <br>')
 l8=('  <h1 align="center"><center>Ubuntumainline</center></h1>')
-l9=('  <h3 align="center"><center>Script for installing the latest mainl kernel on ubuntu and ubuntu based distros.</center></h3>')
+l9=('  <h3 align="center"><center>Script for installing the latest mainline kernel on ubuntu and ubuntu based distros.</center></h3>')
 l10=l7
 l11=l7
 l12=('</div>')
@@ -27,10 +27,10 @@ l20=("- **!** Note these kernels don't work with nvidia drivers. Your pc won't d
 l21=empty
 l22=('### amd64')
 l23=empty
-l24=('**mainl kernel '+(mainl)+'**')
+l24=('**mainline kernel '+(mainline)+'**')
 l25=empty
 l26=('```bash')
-l27=('cd /tmp/ && wget https://raw.githubusercontent.com/hexa-one/ubuntumainline/main/catalog/'+(mainl)+'/install.sh && chmod +x install.sh && sudo ./install.sh -amd')
+l27=('cd /tmp/ && wget https://raw.githubusercontent.com/hexa-one/ubuntumainline/main/catalog/'+(mainline)+'/install.sh && chmod +x install.sh && sudo ./install.sh -amd')
 l28=('```')
 l29=('**lts kernel '+(lts)+'**')
 l30=empty
