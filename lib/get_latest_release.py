@@ -37,7 +37,7 @@ def get_latest():
         lts_remove5109 = lts = [x for x in lts_remove5108 if x.endswith('.10.9')]
         lts_remove5109 = [x for x in lts_remove5108 if x not in lts_remove5109]
         lts = [x for x in lts_remove5109 if x.startswith('5.10')]
-    elif [x for x in notrc if x.endswith('.10.11')]:
+    if [x for x in notrc if x.endswith('.10.11')]:
         lts_remove5101 = lts = [x for x in notrc if x.endswith('.10.1')]
         lts_remove5101 = [x for x in notrc if x not in lts_remove5101]
         lts_remove5102 = lts = [x for x in lts_remove5101 if x.endswith('.10.2')]
@@ -77,7 +77,7 @@ def get_latest():
         mainline_remove54 = [x for x in mainline if x not in mainline_remove54]
         mainline = mainline_remove54
 
-    elif [x for x in mainline if x.endswith('.10')]:
+    if [x for x in mainline if x.endswith('.10')]:
         mainline_remove1 = [x for x in mainline if x.endswith('.1')]
         mainline_remove1 = [x for x in mainline if x not in mainline_remove1]
         mainline_remove2 = [x for x in mainline_remove1 if x.endswith('.2')]
@@ -97,7 +97,7 @@ def get_latest():
         mainline_remove9 = [x for x in mainline_remove8 if x.endswith('.9')]
         mainline_remove9 = [x for x in mainline_remove8 if x not in mainline_remove9]
         mainline = mainline_remove9
-    elif [x for x in mainline if x.endswith('.11')]:
+    if [x for x in mainline if x.endswith('.11')]:
         mainline_remove1 = [x for x in mainline if x.endswith('.1')]
         mainline_remove1 = [x for x in mainline if x not in mainline_remove1]
         mainline_remove2 = [x for x in mainline_remove1 if x.endswith('.2')]
