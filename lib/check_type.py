@@ -1,8 +1,14 @@
 import os
+from .console import get_kernel, print_info
+print_info()
 os.chdir('lib/')
-KERNEL_VER_INPUT = input('Kernel version: ')
+KERNEL_VER_INPUT = get_kernel()
 
 def main():
+    check_type()
+    build()
+
+def check_type():
     if "rc" in (KERNEL_VER_INPUT):
         KERNEL_TYPE=("rc")
         return KERNEL_TYPE

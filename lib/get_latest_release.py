@@ -6,15 +6,14 @@ def get_latest():
     with open('file1.txt') as f:
         content = f.readlines()
     content = [x.strip() for x in content] 
-    con_rc = 'rc'
 
     def Filter(string, substr):
         return [str for str in string if
                 any(sub in str for sub in substr)]
 
-    rc = Filter(content, con_rc)
+    rc = Filter(content, "rc")
     notrc = [x for x in content if x not in rc]
-    rc59 = [x for x in rc if x.startswith('5.9')]
+    rc59 = [x for x in rc if x.startswith('5.9.')]
     rc = [x for x in rc if x not in rc59]
 
     if [x for x in notrc if x.endswith('.10.10')]:
